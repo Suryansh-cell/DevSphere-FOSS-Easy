@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -7,11 +7,12 @@ int main() {
         long long n, k;
         cin >> n >> k;
         long long count = 0, current = 0;
-        while (count < k) {
-            current++;
-            if (current % n != 0) count++;
-        }
-        cout << current << endl;
+        count = k/n;
+    if((k+count)%n!=0){
+        cout<<k+count<<endl;
+    }else{
+        cout<<k+count+1<<endl;
+    }
     }
     return 0;
 }
